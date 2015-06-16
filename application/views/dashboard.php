@@ -15,7 +15,7 @@
 		<meta content="" name="author"/>
 		
 		<script>
-			var BASE_URL = <?php echo base_url(); ?>
+			var BASE_URL = "<?php echo base_url(); ?>";
 		</script>
 		
 		<!-- BEGIN GLOBAL MANDATORY STYLES -->

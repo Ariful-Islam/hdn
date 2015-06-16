@@ -39,7 +39,12 @@
 */
 
 $route['default_controller'] = "init";
+$route['(\w{2})/(.*)'] = '$2';
+$route['(\w{2})'] = $route['default_controller'];
+
 $route['404_override'] = '';
+
+
 
 
 /* End of file routes.php */

@@ -18,6 +18,7 @@ $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ?
 $config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
 $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 
+
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -72,6 +73,15 @@ $config['url_suffix'] = '';
 |
 */
 $config['language']	= 'french';
+
+/* default language abbreviation */
+$config['language_abbr'] = "fr";
+
+/* set available language abbreviations */
+$config['lang_uri_abbr'] = array("fr" => "french", "nl" => "dutch");
+
+/* hide the language segment (use cookie) */
+$config['lang_ignore'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------

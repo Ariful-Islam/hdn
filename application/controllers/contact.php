@@ -40,10 +40,9 @@ class Contact extends CI_Controller {
 		);
 		
 		$return = $this->model->delete_message($data, $this->input->post('id'));
-		if($return)
-		{
-			echo json_encode(true);
-		}
+		
+		echo json_encode(true);
+		
 	}
 	
 	public function send_email($email, $full_name, $phone, $client_email, $message, $company)

@@ -1,7 +1,14 @@
 (function( $ ) {
  
     $.fn.deleteRow = function() {
-        var id = this.data('id');
+        var answer = confirm("Are you sure, you want to delete");
+		if(!answer)
+		{
+			return false;
+		}
+		
+		var elem = this;
+		var id = this.data('id');
 		var url = this.data('link');
 		
 		$.ajax({
@@ -9,8 +16,8 @@
 			url: url,
 			data: { id : id },
 			dataType: "json",
-			success: function(data){
-				this.parent().hide("slow");
+			complete: function(){
+				elem.parents("tr").hide("slow");
 			}
 		});
     };

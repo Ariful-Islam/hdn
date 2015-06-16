@@ -7,6 +7,8 @@ function load_config()
 	if ($CI->session->userdata('sitelang'))
 	{
 		$CI->config->set_item( 'language', $CI->session->userdata('sitelang') );
+		//$lang_abbr = $CI->session->userdata('sitelang')=="french"?"fr":"nl";
+		//$CI->config->set_item( 'language_abbr',  $lang_abbr);
 		
 		$loaded = $CI->lang->is_loaded;
 		$CI->lang->is_loaded = array();
