@@ -32,8 +32,6 @@ class MY_Lang extends CI_Lang
         global $URI, $CFG, $IN;
 
         $config =& $CFG->config;
-		
-		//$CI  =& get_instance();
 
         $index_page    = $config['index_page'];
         $lang_ignore   = $config['lang_ignore'];
@@ -41,7 +39,7 @@ class MY_Lang extends CI_Lang
         $lang_uri_abbr = $config['lang_uri_abbr'];
 
         /* get the language abbreviation from uri */
-        $uri_abbr = $CI->session->userdata("lang_abbr");//$URI->segment(1);
+        $uri_abbr = $URI->segment(1);
 
         /* adjust the uri string leading slash */
         $URI->uri_string = preg_replace("|^\/?|", '/', $URI->uri_string);

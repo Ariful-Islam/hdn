@@ -208,7 +208,7 @@
                         <div class="col-xs-12 col-md-7">
 
                             <!-- contact__form -->
-                            <form class="contact__form" method="post" action="<?php echo base_url(); ?>contact/contact_us">
+                            <form class="contact__form" method="post" action="<?php echo base_url(); ?><?php echo $this->config->item('language_abbr');?>/contact/contact_us">
 
                                 <!-- text-field -->
                                 <div class="text-field">

@@ -42,12 +42,12 @@
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav pull-right">
-                            <li class="active"><a href="<?php echo base_url(); ?>"><span><?php echo $this->lang->line('common_home'); ?></span></a></li>
+                            <li class="active"><a href="<?php echo base_url(); ?><?php echo $this->config->item('language_abbr');?>"><span><?php echo $this->lang->line('common_home'); ?></span></a></li>
                             <li><a href="#about"><span><?php echo $this->lang->line('common_about'); ?></span></a></li>
                             <li><a href="#services"><span><?php echo $this->lang->line('common_services'); ?></span></a></li>
                             <li><a href="#methodology"><span><?php echo $this->lang->line('common_methodology'); ?></span></a></li>
                             <li><a href="#contact"><span><?php echo $this->lang->line('common_contact'); ?></span></a></li>
-                            <li class="pof-btn"><a href="<?php echo base_url(); ?>professionals"><?php echo $this->lang->line('common_professionals'); ?></a></li>
+                            <li class="pof-btn"><a href="<?php echo base_url(); ?><?php echo $this->config->item('language_abbr');?>/professionals"><?php echo $this->lang->line('common_professionals'); ?></a></li>
                         </ul>
                     </div><!-- /navbar-collapse -->
 
